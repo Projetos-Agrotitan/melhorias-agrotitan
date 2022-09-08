@@ -1,25 +1,4 @@
 
-        html {
-            overflow: auto;
-        }
-                  
-        html,
-        body,
-        iframe {
-            margin: 0px;
-            padding: 0px;
-            height: 150%;
-            border: none;
-        }
-                  
-        iframe {
-            display: block;
-            width: 100%;
-            border: none;
-            overflow-y: auto;
-            overflow-x: hidden;
-        }
-        
         @font-face {
             font-family: 'Source Sans';
             src: url(../source-sans-pro/SourceSansPro-Regular.ttf) format('truetype');
