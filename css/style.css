@@ -1,17 +1,38 @@
 
+        html {
+            overflow: auto;
+        }
+                  
+        html,
+        body,
+        iframe {
+            margin: 0px;
+            padding: 0px;
+            height: 150%;
+            border: none;
+        }
+                  
+        iframe {
+            display: block;
+            width: 100%;
+            border: none;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        
         @font-face {
             font-family: 'Source Sans';
-            src: url(./source-sans-pro/SourceSansPro-Regular.ttf) format('truetype');
+            src: url(../source-sans-pro/SourceSansPro-Regular.ttf) format('truetype');
         }
 
         @font-face {
             font-family: 'Source Sans Pro Black';
-            src: url(./source-sans-pro/SourceSansPro-Black.ttf) format('truetype');
+            src: url(../source-sans-pro/SourceSansPro-Black.ttf) format('truetype');
         }
 
         @font-face {
             font-family: 'Source Sans Pro Bold';
-            src: url(./source-sans-pro/SourceSansPro-Bold.ttf) format('truetype');
+            src: url(../source-sans-pro/SourceSansPro-Bold.ttf) format('truetype');
         }
 
 
@@ -325,9 +346,11 @@
             color: white;
             font-size: 30px;
             top: 90%;
-            left: 92%;
+            left: 94%;
             border-radius: 10px;
-            padding: 0.5%;
+            padding: 0.3%;
+            padding-left: 0.5%;
+            padding-right: 0.5%;
         }
 
         .botao_dev a {
@@ -335,3 +358,4 @@
             cursor: pointer;
             color: white;
         }
+
