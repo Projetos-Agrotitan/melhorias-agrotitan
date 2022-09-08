@@ -1,17 +1,17 @@
 
         @font-face {
             font-family: 'Source Sans';
-            src: url(../source-sans-pro/SourceSansPro-Regular.ttf) format('truetype');
+            src: url(./source-sans-pro/SourceSansPro-Regular.ttf) format('truetype');
         }
 
         @font-face {
             font-family: 'Source Sans Pro Black';
-            src: url(../source-sans-pro/SourceSansPro-Black.ttf) format('truetype');
+            src: url(./source-sans-pro/SourceSansPro-Black.ttf) format('truetype');
         }
 
         @font-face {
             font-family: 'Source Sans Pro Bold';
-            src: url(../source-sans-pro/SourceSansPro-Bold.ttf) format('truetype');
+            src: url(./source-sans-pro/SourceSansPro-Bold.ttf) format('truetype');
         }
 
 
