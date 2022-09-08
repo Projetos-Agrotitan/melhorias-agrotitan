@@ -1,0 +1,337 @@
+
+        @font-face {
+            font-family: 'Source Sans';
+            src: url(../source-sans-pro/SourceSansPro-Regular.ttf) format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro Black';
+            src: url(../source-sans-pro/SourceSansPro-Black.ttf) format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro Bold';
+            src: url(../source-sans-pro/SourceSansPro-Bold.ttf) format('truetype');
+        }
+
+
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            padding-bottom: 5%;
+        }
+
+        /*Estilização dos Filtros*/
+
+            .titulos-filtros {
+                width: 85%;
+                margin-left: 7.5%;
+                margin-right: 7.5%;
+                margin-top: 2%;
+                padding: 1.5%;
+                padding-bottom: 0;
+            }
+            .titulo-prazo {
+                margin-left: 11.5%;
+            }
+            .titulo-status {
+                margin-left: 0.5%;
+            }
+            .titulo-modulo {
+                margin-left: 15.5%;
+            }
+
+            .titulos-filtros p {
+                display: inline;
+                font-size: 20px;
+            }
+
+            .opcoes-filtros {
+                width: 85%;
+                margin-left: 7.5%;
+                margin-right: 7.5%;
+                padding: 1.5%;
+                padding-top: 0;
+            }
+
+            #status, #prazo, #modulo {
+                font-size: 1.1rem;
+                font-weight: 500;
+                margin: 10px 14px 0px 0px;
+                padding: 10px 20px;
+                color: black;
+                background: #F4F5F7;
+                border: none;
+                border-radius: 3%;
+            }
+
+            .opcoes-filtros option {
+                font-size: 18px;
+                color: #091E42;
+                padding: 10%;
+                background-color: #FFFFFF;
+            }
+
+            .btn-redefinir {
+                background-color: #FFAB00;
+                padding: 10px 20px;
+                color: #253858;
+                font-size: 1.1rem;
+                border-radius: 4px;
+                border: none;
+                font-weight: 500;
+                cursor: pointer;
+            }
+        /*Fim - Estilização dos Filtros*/
+
+        /*Estilização dos Itens*/
+
+            h4 {
+                font-weight: bold;
+            }
+            .table-titulos {
+                border-bottom: 0.5px solid #8d8d8d21;
+                padding-bottom: 1%;
+                margin-top: 2%;
+            }
+            .table-descricao {
+                width: 40%;
+            }
+
+            .table-status {
+                width: 10%;
+            }
+            .table-prazo {
+                width: 20%;
+                font-size: 13px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            .table-produtos {
+                width: 20%;
+            }
+            .tabela-produtos-1 {
+                margin-top: 1%;
+            }
+
+            .finalizada {
+                background-color: #E3FCEF;
+                color: #006644;
+                padding: 5%;
+                font-size: 0.75rem;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: bold;
+                border-radius: 15%;
+                display: inline;
+            }
+            .futura {
+                background-color: #EAE6FF;
+                color: #403294;          
+                margin-left: 10.5%;
+                padding: 5%;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                border-radius: 15%;
+                display: inline;
+                text-align: center;
+            }
+            .breve {
+                background-color: #FFF0B3;
+                color: #172B4D;
+                margin-left: 1%;
+                padding: 5%;
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                border-radius: 15%;
+                display: inline;
+                text-align: center;
+            }
+            .table-produtos i {
+                color: rgb(9, 206, 147);
+            }
+
+            .row {
+                border: 0.5px solid #8d8d8d21;
+                width: 100%;
+                margin-top: 2%;
+                padding: 1.5%;
+                box-shadow: 3px 3px 2px #8d8d8d21;
+            }
+
+            .row-2 {
+                border: none;
+                box-shadow: none;
+                padding-bottom: 0;
+            }
+
+            .alinhar-imagem {
+                display: inline; 
+                width: 10%;
+                align-items: flex-end;
+            }
+
+            .alinhar-modulo {
+                display: inline;
+            }
+
+            .table-descricao a {
+                text-decoration: none;
+                font-weight: bold;
+                color: #0065FF;
+                transition: 0.5s;
+            }
+
+            .table-descricao i {
+                text-decoration: none;
+                font-weight: bold;
+                color: #0065FF;
+            }
+
+            .table-descricao a:hover {
+                margin-right: 2%;
+            }
+
+            .table-descricao2 i {
+                color: black;
+            }
+
+            .table-produtos2 i {
+                color: black;
+            }
+ 
+            .icon img {
+                width: 14px;
+            }
+
+            .Financeiro img {
+                width: 11px;
+                height: 14px;
+            }
+
+            .Mobile img {
+                width: 11px;
+                height: 16px;
+            }
+
+            .Leite img {
+                width: 9px;
+            }
+
+            .icon {
+                font-size: 15px;
+                color: black;
+                text-transform: uppercase;
+                font-family: 'Source Sans Pro Black';
+            }
+
+        /*Fim - Estilização dos Itens*/
+
+        /*Estilização - Banner*/
+
+            .banner {
+                width: 100%;
+                box-shadow: 0 10px 5px rgba(0,0,0,.1);
+                background: url(https://i.ibb.co/KzQ67Gh/2022-08-18-AGROTITAN-ROADMAP-BANNER.jpg);
+                background-size: cover;
+                height: 40rem;
+            }
+
+            .texto {
+                width: 40%;
+                margin-left: 50%;
+                background-color: rgba(12, 14, 30, 0.932);
+                padding: 2%;
+                border-radius: 5%;
+                position: relative;
+                top: 5%;
+                text-align: center;
+            }
+
+            .update {
+                margin-bottom: 2%;
+            }
+
+            .data {
+                color: white;
+                display: inline;
+                margin-left: 2%;
+                font-family: 'Source Sans Pro Black';
+                font-size: 1.3rem;
+                text-transform: uppercase;
+            }
+
+            .ultima_atualizacao {  
+                font-size: 1.2rem;
+                font-weight: 600;
+                padding: 3px 7px;
+                border-radius: 5%;
+                display: inline;
+                font-family: 'Source Sans';
+                background-color: #03aa72;
+                color: white;
+                text-transform: uppercase;
+            }
+
+            .roadmap_titulo {
+                color: white;
+                font-family: 'Source Sans';
+                margin-top: 5%;
+                font-size: 3rem;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            .roadmap_titulo b {
+                font-family: 'Source Sans Pro Black';
+                text-transform: uppercase;
+            }
+
+            .boas_vindas {
+                color: white;
+                text-align: center;
+                margin-bottom: 5%;
+                font-size: 2rem;
+                text-align: center;
+                margin-left: 10%;
+                width: 80%;
+            }
+
+            .boas_vindas b {
+                font-family: 'Source Sans Pro Bold';
+                font-size: 2rem;
+            }
+
+            .banner h3 {
+                background-color: #ff070788;
+                font-size: 1rem;
+                border-radius: 5px;
+                padding: 1.5%;
+                text-align: center;
+                color: white;
+                font-weight: bold;
+            }
+
+        /*Fim - Estilização Banner*/
+
+        .modelo_atualizacao {
+            display: none;
+        }
+
+        .botao_dev {
+            position: fixed;
+            background-color: rgb(9, 206, 147);
+            color: white;
+            font-size: 30px;
+            top: 90%;
+            left: 92%;
+            border-radius: 10px;
+            padding: 0.5%;
+        }
+
+        .botao_dev a {
+            text-decoration: none;
+            cursor: pointer;
+            color: white;
+        }
