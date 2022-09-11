@@ -11,6 +11,10 @@
 
 </head>
 
+        <div class="botao_dev">
+            <a href="./login/lancamento/selecionar_modulo.html"><i class="bi bi-gear"></i></a>
+        </div>
+
 <!--Filtros-->
 
             <div id="filtro">
@@ -102,6 +106,32 @@
                 }
 
             </script>
+
+             <script>
+            $(document).ready(function() {
+            $("#filtro select").change(function() {
+                applyFilter();
+            });
+
+            function applyFilter() {
+                $(".produto").css('display', '');
+                $(".produto").css('border', '0.5px solid #8d8d8d21');
+                $("#filtro select").each(function() {
+                var categoria = this.id;
+                var pesquisa = $(this).val().toLowerCase();
+
+                $(".produto").find('.' + categoria).each(function() {
+                    var textoCategoria = $(this).text();
+                    var corresponde = textoCategoria.toLowerCase().indexOf(pesquisa) >= 0 || pesquisa == '-';
+                    if (!corresponde) {
+                    $(this).parent().css('display', 'none');
+                    $(this).parent().css('border', 'none');
+                    }
+                });
+                });
+            }
+            });
+        </script>
     
     
     <div class="container tabela-produtos tabela-produtos-1">
@@ -438,29 +468,3 @@
 
 
     <!-- ATENÇÃO: COLE ACIMA DESSA MARCAÇÃO!! (OBS: DEIXE DUAS LINHAS ENTRE A MELHORIA ACIMA)-->
-
- <script>
-            $(document).ready(function() {
-            $("#filtro select").change(function() {
-                applyFilter();
-            });
-
-            function applyFilter() {
-                $(".produto").css('display', '');
-                $(".produto").css('border', '0.5px solid #8d8d8d21');
-                $("#filtro select").each(function() {
-                var categoria = this.id;
-                var pesquisa = $(this).val().toLowerCase();
-
-                $(".produto").find('.' + categoria).each(function() {
-                    var textoCategoria = $(this).text();
-                    var corresponde = textoCategoria.toLowerCase().indexOf(pesquisa) >= 0 || pesquisa == '-';
-                    if (!corresponde) {
-                    $(this).parent().css('display', 'none');
-                    $(this).parent().css('border', 'none');
-                    }
-                });
-                });
-            }
-            });
-        </script>
