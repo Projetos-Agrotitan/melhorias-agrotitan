@@ -10,6 +10,98 @@
     <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 
 </head>
+
+<!--Filtros-->
+
+            <div id="filtro">
+
+                <div class="titulos-filtros">
+                    <p class="titulo-status">Status</p>
+                    <p class="titulo-prazo">Prazo</p>
+                    <p class="titulo-modulo">Módulo</p>
+            </div>
+
+                <div class="opcoes-filtros">        
+                    <select onclick="mudar_status()" id="status" style="background: rgb(244, 245, 247); color: black;">
+                        <option value="-" select>Todos os Status</option>
+                        <option value="Em breve" class="breve-10">Em Breve</option>
+                        <option value="Lançada">Lançada</option>
+                        <option value="Futura">Futura</option>
+                    </select>
+
+                    <select onclick="mudar_prazo()" id="prazo" style="background: rgb(244, 245, 247); color: black;">
+                        <option value="-" select>Todos os Prazos</option>
+                        <option value="1°">1° Semestre de 2022</option>
+                        <option value="2°">2° Semestre de 2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                    </select>
+                    <select onclick="mudar_modulo()" id="modulo" style="background: rgb(244, 245, 247); color: black;">
+                        <option value="-" select>Todos os Módulos</option>
+                        <option value="Café">Café</option>
+                        <option value="Cereais">Cereais</option>
+                        <option value="Expedição">Expedição</option>
+                        <option value="Financeiro">Financeiro</option>
+                        <option value="Fiscal">Fiscal</option>
+                        <option value="Industria">Industria</option>
+                        <option value="Insumos">Insumos</option>
+                        <option value="Lavoura">Lavoura</option>
+                        <option value="Leite">Leite</option>
+                        <option value="Mobile">Mobile</option>
+                        <option value="REAG">REAG</option>
+                        <option value="Sementes">Sementes</option>
+                    </select>
+                    <button class="btn-redefinir" onclick="reset()">Redefinir</button>
+                </div>
+
+            </div>
+
+            <!--Srcipt de Resetar Filtros-->
+
+            <script>
+                function reset() {
+                    location.reload();
+                }
+            </script>
+
+            <!--Script para mudar a cor do Filtro ao Clicar-->
+
+            <script>
+                var btn_status = document.getElementById('status');
+                var btn_prazo = document.getElementById('prazo');
+                var btn_modulo = document.getElementById('modulo');
+
+                function mudar_status() {
+                    if(btn_status.style.color === "black") {
+                        btn_status.style.background = "#253858";
+                        btn_status.style.color = "#FFFFFF";
+                    } else {
+                        btn_status.style.background = "#F4F5F7";
+                        btn_status.style.color = "black";
+                    }
+                }
+
+                function mudar_prazo () {
+                    if(btn_prazo.style.color === "black") {
+                        btn_prazo.style.background = "#253858";
+                        btn_prazo.style.color = "#FFFFFF";
+                    } else {
+                        btn_prazo.style.background = "#F4F5F7";
+                        btn_prazo.style.color = "black";
+                    }
+                }
+
+                function mudar_modulo() {
+                    if(btn_modulo.style.color === "black") {
+                        btn_modulo.style.background = "#253858";
+                        btn_modulo.style.color = "#FFFFFF";
+                    } else {
+                        btn_modulo.style.background = "#F4F5F7";
+                        btn_modulo.style.color = "black";
+                    }
+                }
+
+            </script>
     
     
     <div class="container tabela-produtos tabela-produtos-1">
@@ -347,4 +439,28 @@
 
     <!-- ATENÇÃO: COLE ACIMA DESSA MARCAÇÃO!! (OBS: DEIXE DUAS LINHAS ENTRE A MELHORIA ACIMA)-->
 
+ <script>
+            $(document).ready(function() {
+            $("#filtro select").change(function() {
+                applyFilter();
+            });
 
+            function applyFilter() {
+                $(".produto").css('display', '');
+                $(".produto").css('border', '0.5px solid #8d8d8d21');
+                $("#filtro select").each(function() {
+                var categoria = this.id;
+                var pesquisa = $(this).val().toLowerCase();
+
+                $(".produto").find('.' + categoria).each(function() {
+                    var textoCategoria = $(this).text();
+                    var corresponde = textoCategoria.toLowerCase().indexOf(pesquisa) >= 0 || pesquisa == '-';
+                    if (!corresponde) {
+                    $(this).parent().css('display', 'none');
+                    $(this).parent().css('border', 'none');
+                    }
+                });
+                });
+            }
+            });
+        </script>
